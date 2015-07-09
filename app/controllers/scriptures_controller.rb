@@ -69,6 +69,6 @@ class ScripturesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def scripture_params
-      params.require(:scripture).permit(:book, :chapter, :verse)
+      params.require(:scripture).permit(:book, :chapter, :verser, :text)
     end
 end

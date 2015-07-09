@@ -1,1 +1,1 @@
-json.extract! @scripture, :id, :book, :chapter, :verse, :created_at, :updated_at
+json.extract! @scripture, :id, :book, :chapter, :verser, :text, :created_at, :updated_at

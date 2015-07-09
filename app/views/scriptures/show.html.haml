@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%p
+  %b Book:
+  = @scripture.book
+%p
+  %b Chapter:
+  = @scripture.chapter
+%p
+  %b Verser:
+  = @scripture.verser
+%p
+  %b Text:
+  = @scripture.text
+
+= link_to 'Edit', edit_scripture_path(@scripture)
+\|
+= link_to 'Back', scriptures_path

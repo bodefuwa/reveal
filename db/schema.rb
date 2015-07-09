@@ -11,12 +11,57 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150702184857) do
+ActiveRecord::Schema.define(version: 20150709183256) do
+
+  create_table "media", force: :cascade do |t|
+    t.string   "link"
+    t.integer  "media_type_id"
+    t.integer  "topic_id"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+  end
+
+  add_index "media", ["media_type_id"], name: "index_media_on_media_type_id"
+  add_index "media", ["topic_id"], name: "index_media_on_topic_id"
+
+  create_table "media_types", force: :cascade do |t|
+    t.string   "type"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "prayer_points", force: :cascade do |t|
+    t.string   "point"
+    t.integer  "prayer_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "prayer_points", ["prayer_id"], name: "index_prayer_points_on_prayer_id"
+
+  create_table "prayers", force: :cascade do |t|
+    t.string   "title"
+    t.integer  "topic_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "prayers", ["topic_id"], name: "index_prayers_on_topic_id"
+
+  create_table "result_sets", force: :cascade do |t|
+    t.integer  "topic_id"
+    t.integer  "scripture"
+    t.integer  "prayer_id"
+    t.integer  "media_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "scriptures", force: :cascade do |t|
     t.string   "book"
-    t.integer  "chapter"
-    t.string   "verse"
+    t.string   "chapter"
+    t.string   "verser"
+    t.text     "text"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

@@ -2,8 +2,9 @@ class CreateScriptures < ActiveRecord::Migration
   def change
     create_table :scriptures do |t|
       t.string :book
-      t.integer :chapter
-      t.string :verse
+      t.string :chapter
+      t.string :verser
+      t.text :text
 
       t.timestamps null: false
     end

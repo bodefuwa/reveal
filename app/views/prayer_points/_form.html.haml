@@ -1,0 +1,16 @@
+= form_for @prayer_point do |f|
+  - if @prayer_point.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@prayer_point.errors.count, "error")} prohibited this prayer_point from being saved:"
+      %ul
+        - @prayer_point.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :point
+    = f.text_field :point
+  .field
+    = f.label :prayer
+    = f.text_field :prayer
+  .actions
+    = f.submit 'Save'

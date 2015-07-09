@@ -1,0 +1,27 @@
+%h1 Listing scriptures
+
+%table
+  %thead
+    %tr
+      %th Book
+      %th Chapter
+      %th Verser
+      %th Text
+      %th
+      %th
+      %th
+
+  %tbody
+    - @scriptures.each do |scripture|
+      %tr
+        %td= scripture.book
+        %td= scripture.chapter
+        %td= scripture.verser
+        %td= scripture.text
+        %td= link_to 'Show', scripture
+        %td= link_to 'Edit', edit_scripture_path(scripture)
+        %td= link_to 'Destroy', scripture, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Scripture', new_scripture_path

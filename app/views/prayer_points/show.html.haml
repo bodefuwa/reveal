@@ -1,0 +1,12 @@
+%p#notice= notice
+
+%p
+  %b Point:
+  = @prayer_point.point
+%p
+  %b Prayer:
+  = @prayer_point.prayer
+
+= link_to 'Edit', edit_prayer_point_path(@prayer_point)
+\|
+= link_to 'Back', prayer_points_path

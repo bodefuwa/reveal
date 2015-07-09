@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %b Link:
+  = @medium.link
+%p
+  %b Media type:
+  = @medium.media_type
+%p
+  %b Topic:
+  = @medium.topic
+
+= link_to 'Edit', edit_medium_path(@medium)
+\|
+= link_to 'Back', media_path

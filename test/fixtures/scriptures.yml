@@ -2,10 +2,12 @@
 
 one:
   book: MyString
-  chapter: 1
-  verse: MyString
+  chapter: MyString
+  verser: MyString
+  text: MyText
 
 two:
   book: MyString
-  chapter: 1
-  verse: MyString
+  chapter: MyString
+  verser: MyString
+  text: MyText

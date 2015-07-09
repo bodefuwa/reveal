@@ -18,7 +18,7 @@ class ScripturesControllerTest < ActionController::TestCase
 
   test "should create scripture" do
     assert_difference('Scripture.count') do
-      post :create, scripture: { book: @scripture.book, chapter: @scripture.chapter, verse: @scripture.verse }
+      post :create, scripture: { book: @scripture.book, chapter: @scripture.chapter, text: @scripture.text, verser: @scripture.verser }
     end
 
     assert_redirected_to scripture_path(assigns(:scripture))
@@ -35,7 +35,7 @@ class ScripturesControllerTest < ActionController::TestCase
   end
 
   test "should update scripture" do
-    patch :update, id: @scripture, scripture: { book: @scripture.book, chapter: @scripture.chapter, verse: @scripture.verse }
+    patch :update, id: @scripture, scripture: { book: @scripture.book, chapter: @scripture.chapter, text: @scripture.text, verser: @scripture.verser }
     assert_redirected_to scripture_path(assigns(:scripture))
   end
 

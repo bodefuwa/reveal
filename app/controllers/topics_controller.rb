@@ -4,12 +4,16 @@ class TopicsController < ApplicationController
   # GET /topics
   # GET /topics.json
   def index
-    @topics = Topic.all
+    @topics = Topic.first(20) # Topic.all
   end
 
   # GET /topics/1
   # GET /topics/1.json
   def show
+    @topic      = Topic.find(params[:id])
+    @scriptures = @topic.scriptures
+    @prayers    = @topic.prayers
+    @media      = @topic.media
   end
 
   # GET /topics/new

@@ -1,0 +1,23 @@
+%h1 Listing prayer_points
+
+%table
+  %thead
+    %tr
+      %th Point
+      %th Prayer
+      %th
+      %th
+      %th
+
+  %tbody
+    - @prayer_points.each do |prayer_point|
+      %tr
+        %td= prayer_point.point
+        %td= prayer_point.prayer
+        %td= link_to 'Show', prayer_point
+        %td= link_to 'Edit', edit_prayer_point_path(prayer_point)
+        %td= link_to 'Destroy', prayer_point, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Prayer point', new_prayer_point_path
