@@ -20,7 +20,11 @@ gem 'devise',                   '~> 3.4.1'
 gem 'font-awesome-rails',       '~> 4.3.0.0'
 gem 'active_model_serializers', '~> 0.9.3' 
 gem 'simple_form',              '~> 3.1.0'
-gem 'haml-rails',               '~> 0.9'
+# gem 'haml-rails',               '~> 0.9'
+
+# app specific gems
+gem 'scripture_lookup'
+gem 'nokogiri'
 
 group :development, :test do
   gem 'sqlite3',                '~> 1.3.10'

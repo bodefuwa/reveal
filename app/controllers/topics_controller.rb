@@ -14,6 +14,10 @@ class TopicsController < ApplicationController
     @scriptures = @topic.scriptures
     @prayers    = @topic.prayers
     @media      = @topic.media
+
+    @text = scripture #("Romans 12:1", "NIV")
+    @doc =  @data ||= Nokogiri::HTML(open("https://www.biblegateway.com/passage/?search=romans+12&version=NIV"))
+   
   end
 
   # GET /topics/new

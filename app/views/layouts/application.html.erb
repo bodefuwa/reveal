@@ -8,11 +8,19 @@
   <%= render 'layouts/shim' %>
 </head>
 <body>
-  <%= render 'layouts/header' %>
-  <div class="container">
-    <%= yield %>
-    <%= render 'layouts/footer' %>
+  <div class="site-wrapper">
+
+      <div class="site-wrapper-inner">
+
+        <div class="cover-container">
+          <%= render 'layouts/header' %>
+          <div class="container">
+            <%= yield %>
+            <%= render 'layouts/footer' %>
+          </div>
+          <%= render 'layouts/scripts' %>
+      </div>
+    </div>
   </div>
-  <%= render 'layouts/scripts' %>
 </body>  
 </html>

@@ -13,7 +13,8 @@
   <div class="tab-content">
     <div id="home" class="tab-pane fade in active">
       <h3>SCRIPTURES</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      <p><strong><%= @doc.css('.passage-display-bcv').text %> </strong>| <%= @doc.css('.passage-display-version').text %></p>
+      <p><%= @text %></p>
     </div>
     <div id="menu1" class="tab-pane fade">
       <h3>PRAYERS</h3>

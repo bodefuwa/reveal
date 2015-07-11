@@ -1,2 +1,45 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<% provide(:title, "Home") %>
+
+<p><strong><%= @doc.css('.passage-display-bcv').text %> </strong>| <%= @doc.css('.passage-display-version').text %></p>
+
+<p><%= @text %></p>
+
+=====================
+
+<p><%= @doc.css('.passage-text') %></p>
+
+=====================To Be Sure
+
+<p><%= line_up @doc.css('.poetry', '.text').text %></p>
+
+=====================
+
+<p><%= @doc.css('.passage-text').text %></p>
+
+=====================
+
+<p><%= @doc.css('.passage-display').text %></p>
+
+=====================
+
+<p><%= @doc.css('.passage-display-bcv').text %></p>
+
+=====================
+
+<p><%= @doc.css('.line').text %></p>
+
+=====================
+
+<p><%= @doc.css('.passage-display-version').text %></p>
+
+=====================
+
+<p><%= @doc.css('.poetry').text %></p>
+
+=====================
+
+<p><%= @doc.css('.passage') %></p>
+
+=====================
+
+<p><%= @doc.css('.passage') %></p>
