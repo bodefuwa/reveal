@@ -4,7 +4,8 @@ class TopicsController < ApplicationController
   # GET /topics
   # GET /topics.json
   def index
-    @topics = Topic.first(20) # Topic.all
+    @topics = Topic.all #first(20)
+    # @topic  = Topic.find(params[:id])
   end
 
   # GET /topics/1
@@ -15,7 +16,7 @@ class TopicsController < ApplicationController
     @prayers    = @topic.prayers
     @media      = @topic.media
 
-    @text = scripture #("Romans 12:1", "NIV")
+    # @text = scripture #(passage, version)
     @doc =  @data ||= Nokogiri::HTML(open("https://www.biblegateway.com/passage/?search=romans+12&version=NIV"))
    
   end

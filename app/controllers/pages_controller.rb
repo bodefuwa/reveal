@@ -4,9 +4,13 @@ require 'open-uri'
 
 class PagesController < ApplicationController
   def home
-    @text = scripture
-    @doc =  @data ||= Nokogiri::HTML(open("https://www.biblegateway.com/passage/?search=psalm+1%3A1&version=NKJV"))
-   
+    version = "NIV" 
+    passage   = "Romans 12"
+    
+    @text = scripture(passage, version)
+    @doc =  @data ||= Nokogiri::HTML(open("https://www.biblegateway.com/passage/?search=#{passage}&version=#{version}"))
+
+    # @doc =  @data ||= Nokogiri::HTML(open("https://www.biblegateway.com/passage/?search=psalm+1%3A1&version=NKJV"))
   end
 
   def about

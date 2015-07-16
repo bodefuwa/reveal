@@ -20,8 +20,8 @@ class ScriptureScraper
 
   end
 
-  def resource reference, version
-    url = "https://www.biblegateway.com/passage/?search=#{reference}&version=#{version.to_s}"
+  def resource reference2, version2
+    url = "https://www.biblegateway.com/passage/?search=#{reference2}&version=#{version2.to_s}"
    
     return url
   end

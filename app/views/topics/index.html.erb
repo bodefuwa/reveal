@@ -1,4 +1,45 @@
-<p id="notice"><%= notice %></p>
+<% provide(:title, "Topics") %>
+
+<% if notice %>
+  <div class="alert-info">
+    <p id="notice"><%= notice %></p>
+  </div>
+<% end %>
+
+<h1>Topics</h1>
+
+<div class="row">
+  <div class="col-md-4">
+    <ul class="list-group">
+      <% @topics.each do |topic| %>
+        <li class="list-group-item"><%= link_to topic.title, topic %></li>
+      <% end %>
+    </ul>
+  </div>
+  
+  <div class="col-md-8">
+    <div>
+
+      <!-- Nav tabs -->
+      <ul class="nav nav-tabs" role="tablist">
+        <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Scriptures</a></li>
+        <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Prayers</a></li>
+        <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Videos</a></li>
+        <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Readings</a></li>
+      </ul>
+
+      <!-- Tab panes -->
+      <div class="tab-content">
+        <div role="tabpanel" class="tab-pane active" id="home">...</div>
+        <div role="tabpanel" class="tab-pane" id="profile">...</div>
+        <div role="tabpanel" class="tab-pane" id="messages">...</div>
+        <div role="tabpanel" class="tab-pane" id="settings">...</div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
 
 <h1>Listing Topics</h1>
 
